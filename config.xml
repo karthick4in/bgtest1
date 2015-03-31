@@ -9,5 +9,5 @@
     </author>
    
     <access origin="*" />
-	<plugin name="BackgroundServicePlugin" value="com.red_folder.phonegap.plugin.backgroundservice.BackgroundServicePlugin"/>
+	<gap:plugin name="com.red_folder.phonegap.plugin.backgroundservice" />
 </widget>
