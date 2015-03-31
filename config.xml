@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.smewebsites.nuitblanche" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name> Build Bg Service 1 </name>
+    <name> Build_1</name>
     <description>
         This application was made possible because of the generosity of Nuit Blanche Ottawa + Gatineau and SAW Gallery.
     </description>
@@ -9,5 +9,19 @@
     </author>
    
     <access origin="*" />
-	<gap:plugin name="com.red_folder.phonegap.plugin.backgroundservice" />
+	<plugin name="BackgroundServicePlugin" value="com.red_folder.phonegap.plugin.backgroundservice.BackgroundServicePlugin"/>
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+	<!-- To be added within Application nde -->
+	<service android:name="com.yournamespace.Build_1.MyService">
+		<intent-filter>         
+			<action android:name="com.yournamespace.Build_1.MyService"/> 
+		</intent-filter>     
+	</service>
+
+	<receiver android:name="com.red_folder.phonegap.plugin.backgroundservice.BootReceiver">
+		<intent-filter>     
+			<action android:name="android.intent.action.BOOT_COMPLETED"></action>   
+		</intent-filter> 
+	</receiver>
 </widget>
