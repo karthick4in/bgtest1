@@ -8,5 +8,5 @@
         SMEWebsites
     </author> 
     <access origin="*" />
-	<gap:plugin name="com.red_folder.phonegap.plugin.backgroundservice" />
+	<gap:plugin name="com.red_folder.phonegap.plugin.backgroundservice"  source="pgb" spec="2.0.0" />
 </widget>
